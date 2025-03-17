@@ -14,8 +14,6 @@ async def scrape(channel) -> None:
     most_THIS = list()
 
 
-    def myFunc(e):
-        return e['reactions']
 
     async for message in channel.history(limit=999999):
         counter += 1
@@ -24,6 +22,7 @@ async def scrape(channel) -> None:
         if message.reactions != list():
             if message.reactions[0].count >= 1:
                 for react in message.reactions:
+                    print(react)
                     if react.emoji.name:
                         match str(react.emoji.name):
                             case 'hyperlul':
@@ -41,11 +40,11 @@ async def scrape(channel) -> None:
         #reset all our iterators
         rcount = 0
         lulcount = 0
-        thiscount = 0
-    print((significant_messages[0][0]))                # <class 'list'>    <---- check the data type
+        thiscount = 0                # <class 'list'>    <---- check the data type
     #significant_messages.sort(key=myFunc)
     print(f'{counter} messages where processed in {channel}')
-   
+    for m in significant_messages:
+        print(m)
 
 
 async def get_response(user_input: str, channel) -> str:
