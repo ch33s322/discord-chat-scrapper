@@ -1,0 +1,3 @@
+[480, 1, 'Can I add a Kid Named Finger emote', 'https://discord.com/channels/657566118285672469/804200087315546132/1048451750002184252']
+[1711, 1, 'Cursed option: <:SnapLOKI:814538697395535939> horny jail. Secret channel you can only see if you’re me or on the <@&773793523971129386>', 'https://discord.com/channels/657566118285672469/804200087315546132/866712628159053824']
+[350, 5, 'Mods asleep. Post bazinga', 'https://discord.com/channels/657566118285672469/804200087315546132/1097025858654457996']
