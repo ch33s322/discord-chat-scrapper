@@ -1,6 +1,0 @@
-[374, 1, '"I\'ve committed several violent murders" - <@196469027269378050>', 'https://discord.com/channels/657566118285672469/890841417537159209/1161132191670091856']
-[94, 2, "not sure if this text from my grandpa counts as out of context since there's actually zero context to begin with", 'https://discord.com/channels/657566118285672469/890841417537159209/1296889582251544656']
-[403, 3, '"Child labor is always smart" - <@196113083721056257>', 'https://discord.com/channels/657566118285672469/890841417537159209/1148125375889682513']
-[1024, 3, '***bullying works***', 'https://discord.com/channels/657566118285672469/890841417537159209/916490075716603915']
-[1025, 3, '"bully the children!" <@!285273082279493642>  <@!593473861396201502> <@!747634445154123850>', 'https://discord.com/channels/657566118285672469/890841417537159209/916490020842520596']
-[107, 6, '“We *have* to chop his head off or set him on fire, right?” - <@222877417214181378>', 'https://discord.com/channels/657566118285672469/890841417537159209/1291967739518517289']

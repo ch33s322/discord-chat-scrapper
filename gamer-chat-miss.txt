@@ -1,2 +1,0 @@
-[500, 1, 'Old School Runescape :3', 'https://discord.com/channels/657566118285672469/880589042205474826/1322012570986741800']
-[370, 4, 'Switch tuah, drift on that thang', 'https://discord.com/channels/657566118285672469/880589042205474826/1329494543891959911']

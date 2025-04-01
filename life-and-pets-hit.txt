@@ -1,1 +1,0 @@
-[39, 3, 'Today is a selfie kinda day', 'https://discord.com/channels/657566118285672469/871573492183732244/1344415362002849832']
