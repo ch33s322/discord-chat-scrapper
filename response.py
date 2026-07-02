@@ -1,6 +1,6 @@
 from random import choice
 from operator import itemgetter
-
+import datetime
 
 async def scrape(channel) -> None:
     print(f'scrapping {channel}')
@@ -19,6 +19,18 @@ async def scrape(channel) -> None:
     bonkcount = 0
     firecount = 0
     repostcount = 0
+
+    sigmacount = 0
+    truecount = 0
+    heartcount = 0
+    fedracount = 0
+    eggcount = 0
+    sayagaincount = 0
+    upcount = 0
+    downcount = 0
+
+
+    realestthingyouveeversaidcount = 0
 
 
     counter = 0
@@ -39,6 +51,18 @@ async def scrape(channel) -> None:
     most_fire = list()
     most_repost = list()
 
+    most_sigma = list()
+    most_true = list()
+    most_heart = list()
+    most_fedra = list()
+    most_egg = list()
+    most_say_again = list()
+
+    most_upcount = list()
+    most_downcount = list()
+
+    most_realest_thing_youve_ever_said = list()
+
 
     def write_list(channel, emoji, list) -> None:
         f = open(f'{channel}-{emoji}.txt', 'w', encoding="utf-8")
@@ -51,7 +75,7 @@ async def scrape(channel) -> None:
 
 
 
-    async for message in channel.history(limit=999999):
+    async for message in channel.history(limit=999999, after=datetime.datetime.utcnow()-datetime.timedelta(days=365)):
         counter += 1
         if counter % 100 == 0:
             print(f'processed {counter} messages... \n{len(significant_messages)} significant messages so far')
@@ -62,14 +86,18 @@ async def scrape(channel) -> None:
                         lulcount += react.count
                     elif str(react) == '<:THIS:871238720530055168>':
                         thiscount += react.count
+                        realestthingyouveeversaidcount += react.count
                     elif str(react) == '<:LETSFUCKINKOOOOOOO:896082288612352000>':
                         lfgcount += react.count
+                        realestthingyouveeversaidcount += react.count
                     elif str(react) == '<:HIT:1322082302372745286>':
                         hitcount += react.count
+                        realestthingyouveeversaidcount += react.count
                     elif str(react) == '<:cowbowser:896862779913404427>':
                         cbowcount += react.count
                     elif str(react) == '💯':
                         realcount += react.count
+                        realestthingyouveeversaidcount += react.count
                     elif str(react) == '<:MISS:1322082326611755171>':
                         misscount += react.count
                     elif str(react) == '🔥':
@@ -86,7 +114,27 @@ async def scrape(channel) -> None:
                         cbowthumbcount += react.count
                     elif str(react) == '<:BONK:776198945416151040>':
                         bonkcount += react.count
+                    elif str(react) == '<:sigma:964921987073966212>':
+                        sigmacount += react.count
+                    elif str(react) == '<:MorganFreemanThatTellsTrue:1450629854818078840>':
+                        truecount += react.count
+                        realestthingyouveeversaidcount += react.count
+                    elif str(react) == '<:DETERMINATION:1075089236430172290>':
+                        heartcount += react.count
+                        realestthingyouveeversaidcount += react.count
+                    elif str(react) == '<:YouDidIt:1395588017975984288>':
+                        fedracount += react.count
+                    elif str(react) == '🍆':
+                        eggcount += react.count
+                    elif str(react) == '<:SayThatAgain:1395595752952299570>':
+                        sayagaincount += react.count
+                    elif str(react) == '👍':
+                        upcount += react.count
+                        realestthingyouveeversaidcount += react.count
+                    elif str(react) == '👎':
+                        downcount += react.count
                     rcount += react.count
+
         #put it on a list of interesting things
         if rcount >= 1:
             significant_messages.append([counter, rcount, message.content, message.jump_url])
@@ -116,6 +164,24 @@ async def scrape(channel) -> None:
             most_repost.append([counter,  repostcount, message.content, message.jump_url])
         if sadgrycount >= 1:
             most_sadgry.append([counter,  sadgrycount, message.content, message.jump_url])
+        if sigmacount >= 1:
+            most_sigma.append([counter,  sigmacount, message.content, message.jump_url])
+        if truecount >= 1:
+            most_true.append([counter,  truecount, message.content, message.jump_url])
+        if heartcount >= 1:
+            most_heart.append([counter,  heartcount, message.content, message.jump_url])
+        if fedracount >= 1:
+            most_fedra.append([counter,  fedracount, message.content, message.jump_url])
+        if eggcount >= 1:
+            most_egg.append([counter,  eggcount, message.content, message.jump_url])
+        if sayagaincount >= 1:
+            most_say_again.append([counter,  sayagaincount, message.content, message.jump_url])
+        if upcount >= 1:
+            most_upcount.append([counter,  upcount, message.content, message.jump_url])
+        if downcount >= 1:
+            most_downcount.append([counter,  downcount, message.content, message.jump_url])
+        if realestthingyouveeversaidcount >= 1:
+            most_realest_thing_youve_ever_said.append([counter,  realestthingyouveeversaidcount, message.content, message.jump_url])
         #reset all our iterators
         rcount = 0
         lulcount = 0
@@ -131,6 +197,16 @@ async def scrape(channel) -> None:
         matpatcount = 0
         bonkcount = 0
         repostcount = 0
+        sigmacount = 0
+        truecount = 0
+        heartcount = 0
+        fedracount = 0
+        eggcount = 0
+        sayagaincount = 0
+        upcount = 0
+        downcount = 0
+
+        realestthingyouveeversaidcount = 0
 
     #sort all our lists
     significant_messages = sort_list_data(significant_messages)
@@ -149,7 +225,16 @@ async def scrape(channel) -> None:
     most_THIS = sort_list_data(most_THIS)
     most_vill = sort_list_data(most_vill)
 
+    most_sigma = sort_list_data(most_sigma)
+    most_true = sort_list_data(most_true)
+    most_heart = sort_list_data(most_heart)
+    most_fedra = sort_list_data(most_fedra)
+    most_egg = sort_list_data(most_egg)
+    most_say_again = sort_list_data(most_say_again)
 
+    most_upcount = sort_list_data(most_upcount)
+    most_downcount = sort_list_data(most_downcount)
+    most_realest_thing_youve_ever_said = sort_list_data(most_realest_thing_youve_ever_said)
 
     #write results to file
     write_list(channel, 'all', significant_messages)
@@ -166,7 +251,19 @@ async def scrape(channel) -> None:
     write_list(channel, 'repost', most_repost)
     write_list(channel, 'herm', most_vill)
     write_list(channel, 'sadgry', most_sadgry)
+    write_list(channel, 'sigma', most_sigma)
+    write_list(channel, 'true', most_true)
+    write_list(channel, 'heart', most_heart)
+    write_list(channel, 'fedra', most_fedra)
+    write_list(channel, 'egg', most_egg)
+    write_list(channel, 'say_again', most_say_again)
+    write_list(channel, 'upcount', most_upcount)
+    write_list(channel, 'downcount', most_downcount)
+    write_list(channel, 'realestthingever', most_realest_thing_youve_ever_said)
 
+    
+
+    
 
 
     print(f'{counter} messages where processed in {channel}')
