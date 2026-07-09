@@ -42,7 +42,7 @@ async def scrape(channel) -> None:
     async for message in channel.history(limit=999999, after=datetime.datetime.utcnow()-datetime.timedelta(days=365)):
         counter += 1
         if counter % 100 == 0:
-            print(f'processed {counter} messages... \n{len(significant_messages)} significant messages so far')
+            print(f'processed {counter} messages... \n')
 
         insertMessage(message, channel)
 
@@ -50,6 +50,7 @@ async def scrape(channel) -> None:
             if message.reactions[0].count >= 1:
                 for react in message.reactions:
                     insertReaction(message, react)
+                    
     print(f'{counter} messages where processed in {channel}')
     
 

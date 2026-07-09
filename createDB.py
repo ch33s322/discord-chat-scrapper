@@ -22,7 +22,6 @@ def createSchema(conn):
     #reacts table
     reactSQL = """CREATE TABLE IF NOT EXISTS reactions (
                 mID INTEGER NOT NULL, 
-                reactID TEXT NOT NULL,
                 name TEXT NOT NULL,
                 Number INTEGER NOT NULL
             );"""
