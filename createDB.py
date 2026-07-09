@@ -9,6 +9,7 @@ def createSchema(conn):
     messagesSQL = """CREATE TABLE IF NOT EXISTS messages (
                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
                 mID INTEGER NOT NULL, 
+                channel TEXT NOT NULL,
                 userName TEXT NOT NULL,
                 link TEXT NOT NULL,
                 messageContent TEXT NOT NULL,
