@@ -5,7 +5,7 @@ from discord import Intents, Client, Message
 from response import get_response
 
 #load the token from somewhere safe
-load_dotenv()
+load_dotenv("env/.env")
 TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
 
 

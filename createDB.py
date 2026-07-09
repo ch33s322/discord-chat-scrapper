@@ -12,8 +12,8 @@ def createSchema(conn):
                 channel TEXT NOT NULL,
                 userName TEXT NOT NULL,
                 link TEXT NOT NULL,
-                messageContent TEXT NOT NULL,
-            );"""
+                messageContent TEXT NOT NULL
+                )"""
     cursor.execute(messagesSQL)
     print(messagesSQL)
 
@@ -24,7 +24,7 @@ def createSchema(conn):
                 mID INTEGER NOT NULL, 
                 name TEXT NOT NULL,
                 Number INTEGER NOT NULL
-            );"""
+            )"""
     cursor.execute(reactSQL)
     print(reactSQL)
 
